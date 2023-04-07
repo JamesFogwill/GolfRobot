@@ -20,4 +20,5 @@ LIBS +=    -lopencv_core411 \
 
 
 SOURCES += \
+        ContourTracking.cpp \
         main.cpp
