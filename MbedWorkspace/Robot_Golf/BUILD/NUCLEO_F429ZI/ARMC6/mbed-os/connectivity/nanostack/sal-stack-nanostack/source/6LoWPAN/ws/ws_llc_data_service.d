@@ -15,8 +15,10 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_lowpan_host.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_local_socket.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_rf_tunnel.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_full.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_border_router.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_router.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_host.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_list.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_types.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\ns_trace.h \
@@ -62,6 +64,7 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_neighbor_class.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_ws_extension.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_bootstrap.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_bootstrap_ffn.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_ie_lib.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_llc.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_mpx_header.h \
@@ -70,4 +73,6 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Security\PANA\pana_eap_header.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Security\eapol\eapol_helper.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\etx\etx.h \
-  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\random_early_detection\random_early_detection_api.h
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\random_early_detection\random_early_detection_api.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\ws_management_api.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_config.h

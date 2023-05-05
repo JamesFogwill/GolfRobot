@@ -2,10 +2,21 @@
     {
         "module": "Motor.o",
         "size": {
-            ".text": 310,
+            ".text": 1370,
             ".data": 0,
-            ".bss": 0,
-            ".text-delta": 240,
+            ".bss": 1,
+            ".text-delta": 48,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
+        "module": "SerialClass.o",
+        "size": {
+            ".text": 270,
+            ".data": 0,
+            ".bss": 1,
+            ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
         }
@@ -13,7 +24,7 @@
     {
         "module": "[lib]\\c_w.l",
         "size": {
-            ".text": 4162,
+            ".text": 17166,
             ".data": 16,
             ".bss": 348,
             ".text-delta": 0,
@@ -24,7 +35,7 @@
     {
         "module": "[lib]\\fz_wm.l",
         "size": {
-            ".text": 26,
+            ".text": 1540,
             ".data": 0,
             ".bss": 0,
             ".text-delta": 0,
@@ -33,9 +44,31 @@
         }
     },
     {
+        "module": "[lib]\\libcpp_w.l",
+        "size": {
+            ".text": 67039,
+            ".data": 0,
+            ".bss": 2961,
+            ".text-delta": 0,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
         "module": "[lib]\\libcppabi_w.l",
         "size": {
-            ".text": 44,
+            ".text": 2615,
+            ".data": 0,
+            ".bss": 0,
+            ".text-delta": 0,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
+        "module": "[lib]\\m_wm.l",
+        "size": {
+            ".text": 900,
             ".data": 0,
             ".bss": 0,
             ".text-delta": 0,
@@ -57,10 +90,10 @@
     {
         "module": "main.o",
         "size": {
-            ".text": 410,
+            ".text": 596,
             ".data": 0,
-            ".bss": 0,
-            ".text-delta": 8,
+            ".bss": 865,
+            ".text-delta": 4,
             ".data-delta": 0,
             ".bss-delta": 0
         }
@@ -68,7 +101,7 @@
     {
         "module": "mbed-os\\cmsis",
         "size": {
-            ".text": 12172,
+            ".text": 12222,
             ".data": 168,
             ".bss": 6738,
             ".text-delta": 0,
@@ -79,7 +112,7 @@
     {
         "module": "mbed-os\\connectivity",
         "size": {
-            ".text": 3165,
+            ".text": 3217,
             ".data": 0,
             ".bss": 12724,
             ".text-delta": 0,
@@ -90,7 +123,7 @@
     {
         "module": "mbed-os\\drivers",
         "size": {
-            ".text": 540,
+            ".text": 3836,
             ".data": 0,
             ".bss": 0,
             ".text-delta": 0,
@@ -101,7 +134,7 @@
     {
         "module": "mbed-os\\events",
         "size": {
-            ".text": 1810,
+            ".text": 1814,
             ".data": 0,
             ".bss": 3104,
             ".text-delta": 0,
@@ -110,9 +143,20 @@
         }
     },
     {
+        "module": "mbed-os\\features",
+        "size": {
+            ".text": 18,
+            ".data": 0,
+            ".bss": 0,
+            ".text-delta": 0,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
         "module": "mbed-os\\hal",
         "size": {
-            ".text": 1170,
+            ".text": 1432,
             ".data": 4,
             ".bss": 58,
             ".text-delta": 0,
@@ -123,9 +167,9 @@
     {
         "module": "mbed-os\\platform",
         "size": {
-            ".text": 8076,
+            ".text": 8682,
             ".data": 64,
-            ".bss": 281,
+            ".bss": 285,
             ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
@@ -134,7 +178,7 @@
     {
         "module": "mbed-os\\rtos",
         "size": {
-            ".text": 1482,
+            ".text": 1601,
             ".data": 0,
             ".bss": 8,
             ".text-delta": 0,
@@ -145,9 +189,9 @@
     {
         "module": "mbed-os\\targets",
         "size": {
-            ".text": 10644,
+            ".text": 12480,
             ".data": 9,
-            ".bss": 722,
+            ".bss": 758,
             ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
@@ -155,10 +199,10 @@
     },
     {
         "summary": {
-            "static_ram": 25524,
+            "static_ram": 29392,
             "static_ram_delta": 0,
-            "total_flash": 44304,
-            "total_flash_delta": 248
+            "total_flash": 137091,
+            "total_flash_delta": 52
         }
     }
 ]

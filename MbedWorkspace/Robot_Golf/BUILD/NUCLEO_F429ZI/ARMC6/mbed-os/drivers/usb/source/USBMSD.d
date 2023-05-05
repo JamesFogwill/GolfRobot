@@ -30,8 +30,13 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\drivers\usb\source\USBMSD.o: \
   mbed-os\rtos\include\rtos\internal\mbed_rtos_storage.h \
   mbed-os\cmsis\device\rtos\include\mbed_rtx_storage.h \
   mbed-os\cmsis\CMSIS_5\CMSIS\RTOS2\RTX\Include\rtx_os.h \
+  mbed-os\cmsis\CMSIS_5\CMSIS\RTOS2\RTX\Include\rtx_def.h \
+  mbed-os\cmsis\device\RTE\include\RTE_Components.h \
   mbed-os\cmsis\device\rtos\include\mbed_rtx_conf.h \
   mbed-os\targets\TARGET_STM\mbed_rtx.h \
+  mbed-os\cmsis\device\mbed_cmsis_conf.h \
+  mbed-os\cmsis\CMSIS_5\CMSIS\RTOS2\RTX\Config\RTX_Config.h \
+  mbed-os\cmsis\device\rtos\include\mbed_rtx_conf.h \
   mbed-os\platform\include\platform\NonCopyable.h \
   mbed-os\storage\blockdevice\include\blockdevice\BlockDevice.h \
   mbed-os\rtos\include\rtos\Mutex.h \

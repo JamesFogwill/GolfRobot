@@ -7,8 +7,9 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\targets\TARGET_STM\stm_spi_api.o: \
   mbed-os\platform\include\platform\mbed_error.h \
   mbed-os\platform\include\platform\mbed_retarget.h \
   mbed-os\platform\include\platform\mbed_debug.h \
-  mbed-os\hal\include\hal\spi_api.h mbed-os\targets\TARGET_STM\device.h \
-  mbed-os\targets\TARGET_STM\TARGET_STM32F4\objects.h \
+  mbed-os\platform\include\platform\mbed_critical.h \
+  mbed-os\platform\include\platform\mbed_wait_api.h \
+  mbed-os\platform\include\platform\mbed_atomic.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\cmsis.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\STM32Cube_FW\CMSIS\stm32f4xx.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\STM32Cube_FW\CMSIS\stm32f429xx.h \
@@ -88,10 +89,14 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\targets\TARGET_STM\stm_spi_api.o: \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\STM32Cube_FW\STM32F4xx_HAL_Driver\stm32f4xx_hal_lptim.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\STM32Cube_FW\STM32F4xx_HAL_Driver\stm32f4xx_hal_mmc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F429xI\cmsis_nvic.h \
+  mbed-os\platform\include\platform\internal\mbed_atomic_impl.h \
+  mbed-os\platform\include\platform\mbed_assert.h \
+  mbed-os\targets\TARGET_STM\device.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F4\objects.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F4\cmsis.h \
   mbed-os\targets\TARGET_STM\PortNames.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\PeripheralNames.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\TARGET_STM32F429xI\TARGET_NUCLEO_F429ZI\PinNames.h \
-  mbed-os\targets\TARGET_STM\TARGET_STM32F4\cmsis.h \
   mbed-os\targets\TARGET_STM\PinNamesTypes.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\STM32Cube_FW\STM32F4xx_HAL_Driver\stm32f4xx_ll_usart.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\STM32Cube_FW\STM32F4xx_HAL_Driver\stm32f4xx_ll_tim.h \
@@ -102,11 +107,14 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\targets\TARGET_STM\stm_spi_api.o: \
   mbed-os\targets\TARGET_STM\gpio_object.h \
   mbed-os\targets\TARGET_STM\PortNames.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\PeripheralNames.h \
+  mbed-os\targets\TARGET_STM\stm_i2c_api.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F4\i2c_device.h \
   mbed-os\targets\TARGET_STM\us_ticker_defines.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\us_ticker_data.h \
   mbed-os\targets\TARGET_STM\lp_ticker_defines.h \
-  mbed-os\hal\include\hal\pinmap.h mbed-os\hal\include\hal\dma_api.h \
-  mbed-os\hal\include\hal\buffer.h mbed-os\hal\include\hal\pinmap.h \
+  mbed-os\hal\include\hal\spi_api.h mbed-os\hal\include\hal\pinmap.h \
+  mbed-os\hal\include\hal\dma_api.h mbed-os\hal\include\hal\buffer.h \
+  mbed-os\hal\include\hal\pinmap.h \
   mbed-os\targets\TARGET_STM\PeripheralPins.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\spi_device.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\STM32Cube_FW\STM32F4xx_HAL_Driver\stm32f4xx_ll_spi.h

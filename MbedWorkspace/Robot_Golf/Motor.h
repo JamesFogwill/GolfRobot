@@ -1,4 +1,9 @@
+
 #include "mbed.h"
+#include "stdio.h"
+#include <cstdio>
+#include "iostream"
+#include "cstdlib"
 
 class StepperMotor{
 
@@ -10,8 +15,9 @@ class StepperMotor{
     DigitalOut coilB2;
 
     // there are 200 steps in 1 rev and x steps in the length of the acuator
-    const int phasePerRev = 50;
-    const int totalLengthSteps = 400;
+    const int phasePerFourSteps = 50;
+    const int totalLengthSteps = 1200;
+    const int stepsPerRev = 200;
 
     // the sequence of activation of the coils to get the motor to move clockwise
     const int sequenceClockwise[4][4] = {
@@ -29,6 +35,12 @@ class StepperMotor{
         {1,0,1,0}
     };
 
+    int ballMidPoint[1];
+    int boundaries[2];
+    int currentPos = 0;
+
+    int data;
+
     protected:
 
     public:
@@ -39,15 +51,23 @@ class StepperMotor{
 
     }
 
-    void FullStepCW();
+    void TestRevCW();
+    void TestRevACW();
 
-    void FullStepACW();
-    
-    void HalfStep();
+    bool TestSerial();
 
-    void gameModeOne();
+    void oldReliable();
+
+    void neverMiss();
+    void nMFullStep(int stepsToMove);
+    void MoveXStepsCW(int steps);
+    void MoveXStepsACW(int steps);
 
     void stepperOff();
+
+    
+    
+    //do i make a ramp up function
         
 
 };

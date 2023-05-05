@@ -5,9 +5,9 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\cellular\source\framework\AT\AT_C
   mbed-os\connectivity\cellular\include\cellular\framework\API\CellularContext.h \
   mbed-os\connectivity\netsocket\include\netsocket\NetworkStack.h \
   mbed-os\connectivity\netsocket\include\netsocket\nsapi_types.h \
-  mbed-os\connectivity\netsocket\include\netsocket\SocketAddress.h \
   mbed-os\platform\include\platform\mbed_toolchain.h \
   mbed-os\platform\include\platform\mbed_preprocessor.h \
+  mbed-os\connectivity\netsocket\include\netsocket\SocketAddress.h \
   mbed-os\connectivity\netsocket\include\netsocket\NetworkInterface.h \
   mbed-os\connectivity\netsocket\include\netsocket\nsapi_types.h \
   mbed-os\platform\include\platform\Callback.h \
@@ -31,8 +31,13 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\cellular\source\framework\AT\AT_C
   mbed-os\rtos\include\rtos\internal\mbed_rtos_storage.h \
   mbed-os\cmsis\device\rtos\include\mbed_rtx_storage.h \
   mbed-os\cmsis\CMSIS_5\CMSIS\RTOS2\RTX\Include\rtx_os.h \
+  mbed-os\cmsis\CMSIS_5\CMSIS\RTOS2\RTX\Include\rtx_def.h \
+  mbed-os\cmsis\device\RTE\include\RTE_Components.h \
   mbed-os\cmsis\device\rtos\include\mbed_rtx_conf.h \
   mbed-os\targets\TARGET_STM\mbed_rtx.h \
+  mbed-os\cmsis\device\mbed_cmsis_conf.h \
+  mbed-os\cmsis\CMSIS_5\CMSIS\RTOS2\RTX\Config\RTX_Config.h \
+  mbed-os\cmsis\device\rtos\include\mbed_rtx_conf.h \
   mbed-os\platform\include\platform\Callback.h \
   mbed-os\platform\include\platform\NonCopyable.h \
   mbed-os\connectivity\cellular\include\cellular\framework\API\CellularNetwork.h \
@@ -148,6 +153,8 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\cellular\source\framework\AT\AT_C
   mbed-os\platform\include\platform\mbed_assert.h \
   mbed-os\targets\TARGET_STM\PortNames.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\PeripheralNames.h \
+  mbed-os\targets\TARGET_STM\stm_i2c_api.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F4\i2c_device.h \
   mbed-os\targets\TARGET_STM\us_ticker_defines.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\us_ticker_data.h \
   mbed-os\targets\TARGET_STM\lp_ticker_defines.h \

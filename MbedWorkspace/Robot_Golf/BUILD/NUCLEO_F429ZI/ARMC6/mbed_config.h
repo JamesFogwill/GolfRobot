@@ -102,6 +102,8 @@
 #define MBED_CONF_FAT_CHAN_FF_NORTC_MDAY                                      1                                                                                                // set by library:fat_chan
 #define MBED_CONF_FAT_CHAN_FF_NORTC_MON                                       1                                                                                                // set by library:fat_chan
 #define MBED_CONF_FAT_CHAN_FF_NORTC_YEAR                                      2017                                                                                             // set by library:fat_chan
+#define MBED_CONF_FAT_CHAN_FF_PRINT_FLOAT                                     0                                                                                                // set by library:fat_chan
+#define MBED_CONF_FAT_CHAN_FF_PRINT_LLI                                       0                                                                                                // set by library:fat_chan
 #define MBED_CONF_FAT_CHAN_FF_SFN_BUF                                         12                                                                                               // set by library:fat_chan
 #define MBED_CONF_FAT_CHAN_FF_STRF_ENCODE                                     3                                                                                                // set by library:fat_chan
 #define MBED_CONF_FAT_CHAN_FF_STR_VOLUME_ID                                   0                                                                                                // set by library:fat_chan
@@ -146,6 +148,7 @@
 #define MBED_CONF_LORA_NWKSKEY                                                {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00} // set by library:lora
 #define MBED_CONF_LORA_OVER_THE_AIR_ACTIVATION                                1                                                                                                // set by library:lora
 #define MBED_CONF_LORA_PHY                                                    EU868                                                                                            // set by library:lora
+#define MBED_CONF_LORA_PHY_AS923_SUB_REGION                                   AS1                                                                                              // set by library:lora
 #define MBED_CONF_LORA_PUBLIC_NETWORK                                         1                                                                                                // set by library:lora
 #define MBED_CONF_LORA_TX_MAX_SIZE                                            64                                                                                               // set by library:lora
 #define MBED_CONF_LORA_UPLINK_PREAMBLE_LENGTH                                 8                                                                                                // set by library:lora
@@ -167,6 +170,7 @@
 #define MBED_CONF_LWIP_MEM_SIZE                                               2310                                                                                             // set by library:lwip[STM]
 #define MBED_CONF_LWIP_ND6_QUEUEING                                           0                                                                                                // set by library:lwip
 #define MBED_CONF_LWIP_ND6_RDNSS_MAX_DNS_SERVERS                              0                                                                                                // set by library:lwip
+#define MBED_CONF_LWIP_NETBUF_RECVINFO_ENABLED                                0                                                                                                // set by library:lwip
 #define MBED_CONF_LWIP_NUM_NETBUF                                             8                                                                                                // set by library:lwip
 #define MBED_CONF_LWIP_NUM_PBUF                                               8                                                                                                // set by library:lwip
 #define MBED_CONF_LWIP_PBUF_POOL_SIZE                                         5                                                                                                // set by library:lwip
@@ -261,6 +265,7 @@
 #define MBED_CONF_PLATFORM_CALLBACK_NONTRIVIAL                                0                                                                                                // set by library:platform
 #define MBED_CONF_PLATFORM_CRASH_CAPTURE_ENABLED                              1                                                                                                // set by library:platform[NUCLEO_F429ZI]
 #define MBED_CONF_PLATFORM_CTHUNK_COUNT_MAX                                   8                                                                                                // set by library:platform
+#define MBED_CONF_PLATFORM_DEEPSLEEP_STATS_VERBOSE                            0                                                                                                // set by library:platform[STM]
 #define MBED_CONF_PLATFORM_DEFAULT_SERIAL_BAUD_RATE                           9600                                                                                             // set by library:platform
 #define MBED_CONF_PLATFORM_ERROR_ALL_THREADS_INFO                             0                                                                                                // set by library:platform
 #define MBED_CONF_PLATFORM_ERROR_FILENAME_CAPTURE_ENABLED                     0                                                                                                // set by library:platform
@@ -300,6 +305,7 @@
 #define MBED_CONF_RM1000_AT_BAUDRATE                                          230400                                                                                           // set by library:RM1000_AT
 #define MBED_CONF_RM1000_AT_PROVIDE_DEFAULT                                   0                                                                                                // set by library:RM1000_AT
 #define MBED_CONF_RTOS_API_PRESENT                                            1                                                                                                // set by library:rtos-api
+#define MBED_CONF_RTOS_ENABLE_ALL_RTX_EVENTS                                  0                                                                                                // set by library:rtos
 #define MBED_CONF_RTOS_EVFLAGS_NUM                                            0                                                                                                // set by library:rtos
 #define MBED_CONF_RTOS_IDLE_THREAD_STACK_SIZE                                 512                                                                                              // set by library:rtos
 #define MBED_CONF_RTOS_IDLE_THREAD_STACK_SIZE_DEBUG_EXTRA                     128                                                                                              // set by library:rtos[STM]
@@ -365,7 +371,7 @@
 #define MBED_CONF_TARGET_INIT_US_TICKER_AT_BOOT                               1                                                                                                // set by target:MCU_STM32
 #define MBED_CONF_TARGET_INTERNAL_FLASH_UNIFORM_SECTORS                       0                                                                                                // set by target:MCU_STM32F4
 #define MBED_CONF_TARGET_LPTICKER_LPTIM_CLOCK                                 1                                                                                                // set by target:MCU_STM32
-#define MBED_CONF_TARGET_LPUART_CLOCK_SOURCE                                  USE_LPUART_CLK_LSE|USE_LPUART_CLK_PCLK1                                                          // set by target:MCU_STM32
+#define MBED_CONF_TARGET_LPUART_CLOCK_SOURCE                                  USE_LPUART_CLK_LSE|USE_LPUART_CLK_PCLK1|USE_LPUART_CLK_PCLK3                                     // set by target:MCU_STM32
 #define MBED_CONF_TARGET_LSE_AVAILABLE                                        1                                                                                                // set by target:MCU_STM32
 #define MBED_CONF_TARGET_MPU_ROM_END                                          0x0fffffff                                                                                       // set by target:Target
 #define MBED_CONF_TARGET_NETWORK_DEFAULT_INTERFACE_TYPE                       ETHERNET                                                                                         // set by target:NUCLEO_F429ZI

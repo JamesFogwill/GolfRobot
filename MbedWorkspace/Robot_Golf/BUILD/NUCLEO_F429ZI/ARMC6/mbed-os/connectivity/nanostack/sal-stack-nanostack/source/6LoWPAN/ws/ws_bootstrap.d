@@ -15,8 +15,10 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_lowpan_host.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_local_socket.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_rf_tunnel.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_full.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_border_router.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_router.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_host.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\ns_trace.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
@@ -73,6 +75,7 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\ip.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\fhss\channel_list.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\utils\ns_time.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\ns_time_api.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_common_defines.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_config.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_common.h \
@@ -89,6 +92,11 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_ie_lib.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_stats.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_cfg_settings.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_bootstrap_6lbr.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_bootstrap_6lr.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_bootstrap_ffn.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_bootstrap_6ln.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_phy.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\lowpan_adaptation_interface.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\etx\etx.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\nd_proxy\nd_proxy.h \

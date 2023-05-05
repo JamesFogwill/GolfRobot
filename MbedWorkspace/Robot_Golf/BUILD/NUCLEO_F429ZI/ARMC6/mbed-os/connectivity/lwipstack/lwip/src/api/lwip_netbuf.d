@@ -4,6 +4,8 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\lwipstack\lwip\src\api\lwip_netbu
   mbed-os\connectivity\lwipstack\lwip\src\include\lwip\opt.h \
   mbed-os\connectivity\lwipstack\include\lwipstack\lwipopts.h \
   mbed-os\connectivity\netsocket\include\netsocket\nsapi_types.h \
+  mbed-os\platform\include\platform\mbed_toolchain.h \
+  mbed-os\platform\include\platform\mbed_preprocessor.h \
   mbed-os\platform\include\platform\mbed_retarget.h \
   mbed-os\cmsis\CMSIS_5\CMSIS\RTOS2\Include\cmsis_os2.h \
   mbed-os\connectivity\lwipstack\lwip-sys\lwip_random.h \
@@ -11,8 +13,6 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\lwipstack\lwip\src\api\lwip_netbu
   mbed-os\connectivity\lwipstack\lwip\src\include\lwip\debug.h \
   mbed-os\connectivity\lwipstack\lwip\src\include\lwip\arch.h \
   mbed-os\connectivity\lwipstack\lwip-sys\arch\cc.h \
-  mbed-os\platform\include\platform\mbed_toolchain.h \
-  mbed-os\platform\include\platform\mbed_preprocessor.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\cmsis.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\STM32Cube_FW\CMSIS\stm32f4xx.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\STM32Cube_FW\CMSIS\stm32f429xx.h \

@@ -15,12 +15,15 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_lowpan_host.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_local_socket.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_rf_tunnel.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_full.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_border_router.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_router.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_host.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_list.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_types.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\ns_trace.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
+  mbed-os\connectivity\mbedtls\include\mbedtls\version.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\config.h \
   mbed-os\connectivity\mbedtls\platform\inc\platform_mbed.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\check_config.h \

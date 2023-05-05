@@ -15,8 +15,10 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_lowpan_host.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_local_socket.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_rf_tunnel.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_full.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_border_router.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_router.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_host.h \
   mbed-os\platform\randlib\include\mbed-client-randlib\randLIB.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\fnv_hash\fnv_hash.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\ipv6_flow.h

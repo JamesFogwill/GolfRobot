@@ -1,8 +1,8 @@
-TEMPLATE = app
 CONFIG += console c++17
 CONFIG -= app_bundle
-CONFIG -= qt
 
+QT += core gui
+QT += serialport
 #=====================OpenCV Includes=======================
 INCLUDEPATH += C:\AINT308Lib\OpenCV41\release\install\include
 
@@ -18,7 +18,15 @@ LIBS +=    -lopencv_core411 \
     -lopencv_objdetect411 \
     -lopencv_bgsegm411 \
 
-
 SOURCES += \
+        BufferClass.cpp \
         ContourTracking.cpp \
+        GuiClass.cpp \
+        SerialPortClass.cpp \
         main.cpp
+
+HEADERS += \
+    BufferClass.h \
+    GuiClass.h \
+    SerialPortClass.h \
+    setup.h

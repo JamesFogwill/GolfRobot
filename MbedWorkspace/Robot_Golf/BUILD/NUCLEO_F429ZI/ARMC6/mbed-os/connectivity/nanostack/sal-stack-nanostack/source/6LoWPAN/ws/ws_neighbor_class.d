@@ -15,8 +15,10 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_lowpan_host.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_local_socket.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_rf_tunnel.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_full.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_border_router.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_router.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_host.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_list.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_types.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\ns_trace.h \
@@ -53,5 +55,8 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\pan_blacklist\pan_blacklist_api.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\mac_neighbor_table\mac_neighbor_table.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_polling_api.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_ie_lib.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\ws_management_api.h \
-  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_config.h
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_config.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\mac_api.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\mac_mcps.h

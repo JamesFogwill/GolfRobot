@@ -22,6 +22,7 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\coap-service\source\coa
   mbed-os\connectivity\nanostack\coap-service\source\include\coap_service_api_internal.h \
   mbed-os\connectivity\nanostack\coap-service\source\include\coap_message_handler.h \
   mbed-os\connectivity\nanostack\coap-service\source\include\coap_security_handler.h \
+  mbed-os\connectivity\mbedtls\include\mbedtls\version.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\config.h \
   mbed-os\connectivity\mbedtls\platform\inc\platform_mbed.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\check_config.h \

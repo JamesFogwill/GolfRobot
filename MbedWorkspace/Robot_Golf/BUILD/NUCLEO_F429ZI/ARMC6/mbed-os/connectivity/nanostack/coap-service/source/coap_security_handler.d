@@ -3,6 +3,7 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\coap-service\source\coa
   BUILD\NUCLEO_F429ZI\ARMC6\mbed_config.h \
   mbed-os\connectivity\nanostack\coap-service\source\include\coap_security_handler.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_types.h \
+  mbed-os\connectivity\mbedtls\include\mbedtls\version.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\config.h \
   mbed-os\connectivity\mbedtls\platform\inc\platform_mbed.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\check_config.h \
@@ -28,7 +29,6 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\coap-service\source\coa
   mbed-os\connectivity\mbedtls\include\mbedtls\ssl_cookie.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\entropy.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\sha512.h \
-  mbed-os\connectivity\mbedtls\include\mbedtls\entropy_poll.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\ctr_drbg.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\aes.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\hmac_drbg.h \

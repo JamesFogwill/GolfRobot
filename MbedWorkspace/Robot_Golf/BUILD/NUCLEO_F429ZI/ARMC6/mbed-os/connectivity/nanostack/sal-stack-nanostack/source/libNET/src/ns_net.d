@@ -15,8 +15,10 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_lowpan_host.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_local_socket.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_rf_tunnel.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_full.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_border_router.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_router.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_host.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_scheduler.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\ns_trace.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
@@ -101,7 +103,16 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sou
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\Thread\thread_bootstrap.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_event.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\Thread\thread_management_internal.h \
-  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_bootstrap.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_common.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_api.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_config.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_ws_extension.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_api.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_fhss.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_config.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_common_defines.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_neighbor_class.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_ws_extension.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_pae_controller.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\BorderRouter\border_router.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\MAC\mac_data_poll.h \

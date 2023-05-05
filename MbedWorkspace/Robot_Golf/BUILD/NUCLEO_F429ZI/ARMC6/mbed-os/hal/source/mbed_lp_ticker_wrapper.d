@@ -100,6 +100,8 @@ BUILD\NUCLEO_F429ZI\ARMC6\mbed-os\hal\source\mbed_lp_ticker_wrapper.o: \
   mbed-os\platform\include\platform\mbed_preprocessor.h \
   mbed-os\targets\TARGET_STM\PortNames.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\PeripheralNames.h \
+  mbed-os\targets\TARGET_STM\stm_i2c_api.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F4\i2c_device.h \
   mbed-os\targets\TARGET_STM\us_ticker_defines.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F4\us_ticker_data.h \
   mbed-os\targets\TARGET_STM\lp_ticker_defines.h \
