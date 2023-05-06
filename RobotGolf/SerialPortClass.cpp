@@ -37,7 +37,6 @@ void SerialCommunicator::openSerialPort()
 void SerialCommunicator::writeData(string data){
 
     data="s"+data+"e";
-    cout<<data<<endl;
     if(STM->isWritable()){
         STM->write(data.c_str());
         cout<<data<<endl;

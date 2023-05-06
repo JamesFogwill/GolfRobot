@@ -7,7 +7,7 @@ extern SerialClass mySerial;
 bool StepperMotor::TestSerial(){
 
     data = mySerial.serialRead();
-    if(data==2){
+    if(data==200){
         TestRevCW();
         stepperOff();
         return true;
@@ -19,7 +19,6 @@ bool StepperMotor::TestSerial(){
 void StepperMotor::TestRevCW(){
 
 // loop 200 times as there are 200 steps in 1 rotation.
-
     for(int i = 0; i <= phasePerFourSteps; i++){
         for(int j = 0; j <= 3; j++){
 
@@ -28,7 +27,7 @@ void StepperMotor::TestRevCW(){
             coilB1.write(sequenceClockwise[j][2]);
             coilB2.write(sequenceClockwise[j][3]);
 
-            wait_us(1000);
+            wait_us(900);
         }
     }
 }
@@ -44,10 +43,64 @@ void StepperMotor::TestRevACW(){
             coilB1.write(sequenceAntiClockwise[j][2]);
             coilB2.write(sequenceAntiClockwise[j][3]);
 
-            wait_us(1000);
+            wait_us(900);
         }
     }
 }
+
+int StepperMotor::accelDecelCW(char accOrDecc, int steps){
+
+    if(accOrDecc == 'a'){
+
+        for(int p = motorMinSpeed; p >= motorMaxSpeed; p-- ){
+
+            for(int i = 0; i <= phasePerFourSteps; i++){
+                
+                for(int j = 0; j <= 3; j++){
+
+                    coilA1.write(sequenceClockwise[j][0]);
+                    coilA2.write(sequenceClockwise[j][1]);
+                    coilB1.write(sequenceClockwise[j][2]);
+                    coilB2.write(sequenceClockwise[j][3]);
+
+                    wait_us(p);
+                    steps--;
+                }
+            }
+        
+        
+        }
+
+        return steps;
+    }
+    else if (accOrDecc == 'd') {
+
+        for(int p = motorMaxSpeed; p >= motorMinSpeed; p++ ){
+
+            for(int i = 0; i <= phasePerFourSteps; i++){
+
+                for(int j = 0; j <= 3; j++){
+
+                    coilA1.write(sequenceClockwise[j][0]);
+                    coilA2.write(sequenceClockwise[j][1]);
+                    coilB1.write(sequenceClockwise[j][2]);
+                    coilB2.write(sequenceClockwise[j][3]);
+
+                    wait_us(p);
+                
+                }
+            }
+        }
+
+        return steps;
+    }
+    else {
+        return steps;
+    }
+       
+};
+
+
 
 void StepperMotor::oldReliable(){
 
@@ -83,13 +136,12 @@ void StepperMotor::neverMiss(){
     boundaries[0] = 310;
     boundaries[1] = 90;
     //ballMidPoint[0] = 100;
-    ballMidPoint[0] = mySerial.serialRead();
     
     i = 1;
     while(true){
         
         // reads the position of the ball from Qt if there are coordinates being transmitted and print them
-        cout<<"Begin playing"<<endl;
+        //cout<<"Begin playing"<<endl;
 
         //comment out to test
         /*
@@ -145,6 +197,12 @@ void StepperMotor::nMFullStep(int stepsToMove){
 }
 
 void StepperMotor::MoveXStepsCW(int steps){
+    // divide by 4 because each cycle of the inside for loop is 4 steps
+    // the outside loop is step*4
+    char acc = 'a';
+    int stepsLeft = accelDecelCW(acc, steps);
+    int stepsLeftToDec = stepsLeft - stepsLeft;
+    for
     for(int i = 0; i <= (steps/4); i++){
         for(int j = 0; j <= 3; j++){
 

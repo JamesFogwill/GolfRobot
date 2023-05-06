@@ -17,6 +17,16 @@ int main()
     bool serialWork = true; 
     //creates steppermotor object and initialises it with these pins
     StepperMotor myMotor(PF_13, PE_9, PE_11, PF_14);
+
+    myMotor.TestRevCW();
+    myMotor.TestRevCW();
+    myMotor.TestRevCW();
+    myMotor.TestRevACW();
+    myMotor.TestRevACW();
+    myMotor.TestRevACW();
+    myMotor.stepperOff();
+/*
+    myMotor.neverMiss();
     
     serialWork = myMotor.TestSerial();
 
@@ -71,4 +81,5 @@ int main()
         }
 
     return 0;
+    */
 }

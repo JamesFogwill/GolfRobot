@@ -18,6 +18,8 @@ class StepperMotor{
     const int phasePerFourSteps = 50;
     const int totalLengthSteps = 1200;
     const int stepsPerRev = 200;
+    const int motorMaxSpeed = 900;
+    const int motorMinSpeed = 1700;
 
     // the sequence of activation of the coils to get the motor to move clockwise
     const int sequenceClockwise[4][4] = {
@@ -55,6 +57,8 @@ class StepperMotor{
     void TestRevACW();
 
     bool TestSerial();
+
+    int accelDecelCW(char, int);
 
     void oldReliable();
 

@@ -25,6 +25,8 @@ int Gui::getUserInput(){
         }
 
         cout<<"You chose option: "<<choice<<endl;
+        // write the option number to the serial
+
 
         return choice;
     }

@@ -9,8 +9,9 @@ SerialCommunicator STMBoard;
 int main()
 {
 
-    int choice = myGui.getUserInput();
-    STMBoard.writeData(to_string(choice));
+    //int choice = myGui.getUserInput();
+    int choice = 3;
+    //STMBoard.writeData(to_string(2));
 
     if(choice == 3){
 
@@ -84,9 +85,9 @@ int main()
                 //send p.y through the com port
                 cout<<p.y<<endl;
 
-                int test = 2;
-                p.y = 2;
-                STMBoard.writeData(to_string(test));
+                int test = 200;
+
+                STMBoard.writeData(to_string(p.y));
             }
             /*
             //HSV colour space White tracking
