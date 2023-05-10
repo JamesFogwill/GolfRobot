@@ -1,34 +1,18 @@
-/* mbed Microcontroller Library
- * Copyright (c) 2019 ARM Limited
- * SPDX-License-Identifier: Apache-2.0
- */
-
 #include "SetUp.h"
-
 using namespace std;
-
-
 
 SerialClass mySerial;
 
 int main()
 {   
-    int option = 0;
+    int option = 3;
     bool serialWork = true; 
     //creates steppermotor object and initialises it with these pins
     StepperMotor myMotor(PF_13, PE_9, PE_11, PF_14);
 
-    myMotor.TestRevCW();
-    myMotor.TestRevCW();
-    myMotor.TestRevCW();
-    myMotor.TestRevACW();
-    myMotor.TestRevACW();
-    myMotor.TestRevACW();
-    myMotor.stepperOff();
-/*
-    myMotor.neverMiss();
+    //myMotor.neverMiss();
     
-    serialWork = myMotor.TestSerial();
+    //serialWork = myMotor.TestSerial();
 
     option = mySerial.serialRead();
 
@@ -53,6 +37,7 @@ int main()
 
             case 3:
 
+                //myMotor.TestRevCW();
                 myMotor.neverMiss();
                 myMotor.stepperOff();
 
@@ -81,5 +66,5 @@ int main()
         }
 
     return 0;
-    */
+    
 }

@@ -12,15 +12,11 @@ class SerialClass {
 
     BufferedSerial pc;
 
-    char outputBuffer[10] = {0};
-
     string data;
 
     int bufferIdx = 0;
 
     char c;
-
-    bool storeData = false;
 
     int serialInt;
 
@@ -33,6 +29,6 @@ class SerialClass {
 
     int serialRead();
 
-    void serialWrite(int data);
+    void serialWrite(int, int);
 
 };

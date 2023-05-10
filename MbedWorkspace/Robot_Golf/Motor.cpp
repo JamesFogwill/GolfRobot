@@ -1,5 +1,6 @@
 #include "SetUp.h"
 
+
 using namespace std;
 
 extern SerialClass mySerial;
@@ -16,19 +17,30 @@ bool StepperMotor::TestSerial(){
     //mySerial.serialWrite(data);
 }
 
+void StepperMotor::sequenceCW(int delay){
+    for(int j = 0; j <= 3; j++){
+        coilA1.write(sequenceClockwise[j][0]);
+        coilA2.write(sequenceClockwise[j][1]);
+        coilB1.write(sequenceClockwise[j][2]);
+        coilB2.write(sequenceClockwise[j][3]);
+        wait_us(delay);
+    }
+};
+void StepperMotor::sequenceACW(int delay){
+    for(int j = 0; j <= 3; j++){
+        coilA1.write(sequenceAntiClockwise[j][0]);
+        coilA2.write(sequenceAntiClockwise[j][1]);
+        coilB1.write(sequenceAntiClockwise[j][2]);
+        coilB2.write(sequenceAntiClockwise[j][3]);
+        wait_us(delay);
+    }
+};
+
 void StepperMotor::TestRevCW(){
 
 // loop 200 times as there are 200 steps in 1 rotation.
     for(int i = 0; i <= phasePerFourSteps; i++){
-        for(int j = 0; j <= 3; j++){
-
-            coilA1.write(sequenceClockwise[j][0]);
-            coilA2.write(sequenceClockwise[j][1]);
-            coilB1.write(sequenceClockwise[j][2]);
-            coilB2.write(sequenceClockwise[j][3]);
-
-            wait_us(900);
-        }
+       sequenceCW(1000);
     }
 }
 
@@ -36,68 +48,70 @@ void StepperMotor::TestRevACW(){
 
 // loop 200 times as there are 200 steps in 1 rotation.
     for(int i = 0; i <= phasePerFourSteps; i++){
-        for(int j = 0; j <= 3; j++){
-
-            coilA1.write(sequenceAntiClockwise[j][0]);
-            coilA2.write(sequenceAntiClockwise[j][1]);
-            coilB1.write(sequenceAntiClockwise[j][2]);
-            coilB2.write(sequenceAntiClockwise[j][3]);
-
-            wait_us(900);
-        }
+        sequenceACW(1000);
     }
 }
 
-int StepperMotor::accelDecelCW(char accOrDecc, int steps){
+int StepperMotor::accelDecelCW(int accOrDecc, int steps){
 
-    if(accOrDecc == 'a'){
-
-        for(int p = motorMinSpeed; p >= motorMaxSpeed; p-- ){
-
-            for(int i = 0; i <= phasePerFourSteps; i++){
-                
-                for(int j = 0; j <= 3; j++){
-
-                    coilA1.write(sequenceClockwise[j][0]);
-                    coilA2.write(sequenceClockwise[j][1]);
-                    coilB1.write(sequenceClockwise[j][2]);
-                    coilB2.write(sequenceClockwise[j][3]);
-
-                    wait_us(p);
-                    steps--;
-                }
+    if(accOrDecc == 1){
+        for(int p = motorMinSpeed; p >= motorMaxSpeed; p -= 25 ){
+            sequenceCW(p);
+            steps-=4;
+            if(steps <= 0){
+                break;
             }
-        
-        
         }
-
         return steps;
     }
-    else if (accOrDecc == 'd') {
-
-        for(int p = motorMaxSpeed; p >= motorMinSpeed; p++ ){
-
-            for(int i = 0; i <= phasePerFourSteps; i++){
-
-                for(int j = 0; j <= 3; j++){
-
-                    coilA1.write(sequenceClockwise[j][0]);
-                    coilA2.write(sequenceClockwise[j][1]);
-                    coilB1.write(sequenceClockwise[j][2]);
-                    coilB2.write(sequenceClockwise[j][3]);
-
-                    wait_us(p);
-                
-                }
+    else if (accOrDecc == 0) {
+        for(int p = motorMaxSpeed; p >= motorMinSpeed; p += 25 ){
+            sequenceCW(p);
+            steps -=4;
+            if (steps <= 0) {
+            break;
             }
         }
-
         return steps;
     }
     else {
         return steps;
+    }     
+};
+
+int StepperMotor::accelDecelACW(int accOrDecc, int steps){
+    // keeps track of the total
+    int totalSteps = steps;
+    //keeps track of current speed, sets lowest speed to start.
+    // accelerating
+    if(accOrDecc == 1){
+        // loop until max speed or minimum delay has been reached
+        for(int p = motorMinSpeed; p >= motorMaxSpeed; p -= 25 ){
+            sequenceACW(p);// this is 4 steps so must - 4 from steps
+            steps -= 4;
+            //check to make sure we have the room to decelerate
+            //if the stepsleft is half the total start to decelerate
+            currentDelay = p;
+
+            if (steps <= (totalSteps/2)) {
+                accOrDecc = 0;
+                break;
+            }
+        }
+        
     }
-       
+    //decelerating
+    // this assumes that it takes the same number of steps to accelerate as it does to decelerate
+    if (accOrDecc == 0) {
+        for(int p = currentDelay; p <= motorMinSpeed; p += 25 ){
+            sequenceACW(p);
+            steps -=4;
+        }
+        return steps;
+    }
+    else {
+        return steps;
+    }     
 };
 
 
@@ -178,16 +192,16 @@ void StepperMotor::neverMiss(){
 
 void StepperMotor::nMFullStep(int stepsToMove){
 
-    //the motor moves clockwise
+    //if the motor needs to move cw
     if (stepsToMove > 0) {
-        
+        // move that many steps cw
         MoveXStepsCW(stepsToMove);
     }
-    //if the motor needs to move ant clockwise move that many steps ant clockwise
+    //if the motor needs to move acw
     else if (stepsToMove < 0) {
-        // Takes the magnitude of stepsToMove as it will be negaitve when moving anticlockwise.
+        // Takes the magnitude of stepsToMove as it will be negaitve when moving acw.
         int stepsToMoveACW = (stepsToMove*-1);
-        //uses the magnitude to move that many steps anticlockwise
+        //uses the magnitude to move that many steps acw
         MoveXStepsACW(stepsToMoveACW);
     }
     else {
@@ -197,36 +211,57 @@ void StepperMotor::nMFullStep(int stepsToMove){
 }
 
 void StepperMotor::MoveXStepsCW(int steps){
-    // divide by 4 because each cycle of the inside for loop is 4 steps
-    // the outside loop is step*4
-    char acc = 'a';
-    int stepsLeft = accelDecelCW(acc, steps);
-    int stepsLeftToDec = stepsLeft - stepsLeft;
-    for
-    for(int i = 0; i <= (steps/4); i++){
-        for(int j = 0; j <= 3; j++){
-
-            coilA1.write(sequenceClockwise[j][0]);
-            coilA2.write(sequenceClockwise[j][1]);
-            coilB1.write(sequenceClockwise[j][2]);
-            coilB2.write(sequenceClockwise[j][3]);
-
-            wait_us(1000);
+    
+    // accelerate = 1 decelerate = 0
+    int AOD = 1;
+    // accelerates te motor and stores the remaining movement
+    int stepsLeft = accelDecelCW(AOD, steps);
+    //works out how many steps have been moved (needed for decelerate)
+    int stepsMoved = steps - stepsLeft;
+    //work out how many steps left before deceleration
+    int stepsLeftToDec = stepsLeft - stepsMoved;
+    if(stepsLeft >= 5){
+        // divide by 4 because each cycle of the inside for loop is 4 steps
+        // the outside loop is step*4
+        for(int i = 0; i <= (stepsLeftToDec/4); i++){
+        sequenceCW(motorMaxSpeed);
+            stepsLeft -=4;
         }
+        //sets to deccelerate
+        AOD = 0;
+        //decelerate
+        accelDecelCW(AOD,stepsLeft);
     }
+    else {
+        
+        stepperOff();
+    }
+    //THE ABOVE STILL NEEDS TESTING AND THE ACW IMPLEMENTED
+    // IT SHOULD ACCEL AND DECEL CORRECETLY
 }
 
 void StepperMotor::MoveXStepsACW(int steps){
-    for(int i = 0; i <= (steps/4); i++){
-        for(int j = 0; j <= 3; j++){
 
-            coilA1.write(sequenceAntiClockwise[j][0]);
-            coilA2.write(sequenceAntiClockwise[j][1]);
-            coilB1.write(sequenceAntiClockwise[j][2]);
-            coilB2.write(sequenceAntiClockwise[j][3]);
+    int AOD = 1;
+    int stepsLeft = accelDecelACW(AOD, steps);
+    int stepsMoved = steps - stepsLeft;
+    int stepsLeftToDec = stepsLeft - stepsMoved;
 
-            wait_us(1000);
+    if(stepsLeft >= 5){
+        // divide by 4 because each cycle of the inside for loop is 4 steps
+        // the outside loop is step*4
+        for(int i = 0; i <= (stepsLeftToDec/4); i++){
+        sequenceACW(motorMaxSpeed);
+            stepsLeft -=4;
         }
+        //sets to deccelerate
+        AOD = 0;
+        //decelerate
+        accelDecelACW(AOD,stepsLeft);
+    }
+    else {
+        
+        stepperOff();
     }
 }
 

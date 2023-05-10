@@ -1,4 +1,5 @@
 #include "SetUp.h"
+#include <string>
 
 
 SerialClass::SerialClass() : pc(USBTX,USBRX){
@@ -34,15 +35,15 @@ int SerialClass::serialRead(){
                 }
             }
             serialInt = atoi(data.c_str());
-            //pc.write(data.c_str(),3);
+            pc.write(data.c_str(),3);
             return serialInt;
         }
     }
 }
 
-void SerialClass::serialWrite(int data){
+void SerialClass::serialWrite(int data, int size){
 
-    sprintf(outputBuffer, "%d", data);
-    pc.write(outputBuffer,strlen(outputBuffer));
+    string dataStr = to_string(data);
+    pc.write(dataStr.c_str(),size);
 
 }

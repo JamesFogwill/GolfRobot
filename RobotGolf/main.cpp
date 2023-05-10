@@ -2,16 +2,31 @@
 #include <SerialPortClass.h>
 #include <BufferClass.h>
 #include <GuiClass.h>
+#include<unistd.h>
+#include <QCoreApplication>
 
 Gui myGui;
 SerialCommunicator STMBoard;
 
-int main()
+int main(int argc, char *argv[])
 {
+    //QCoreApplication app(argc, argv);
 
-    //int choice = myGui.getUserInput();
-    int choice = 3;
-    //STMBoard.writeData(to_string(2));
+    int choice = myGui.getUserInput();
+    STMBoard.openSerialPort();
+    usleep(100000);
+
+    imshow("Inrange",Mat(100,100,CV_8UC3,Scalar(0,0,0)));
+    STMBoard.writeData(to_string(choice));
+
+//    while(1)
+//    {
+//        usleep(10000);
+//        STMBoard.writeData(to_string(choice));
+//    }
+
+
+
 
     if(choice == 3){
 
@@ -83,9 +98,7 @@ int main()
 
                 // Converts p.y the int to a string of ints to be sent
                 //send p.y through the com port
-                cout<<p.y<<endl;
-
-                int test = 200;
+                //cout<<p.y<<endl;
 
                 STMBoard.writeData(to_string(p.y));
             }
@@ -103,7 +116,6 @@ int main()
 
         }
     }
-
-
+    //return app.exec();
     return 0;
 }

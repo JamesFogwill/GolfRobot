@@ -1,4 +1,3 @@
-
 #include "mbed.h"
 #include "stdio.h"
 #include <cstdio>
@@ -37,11 +36,17 @@ class StepperMotor{
         {1,0,1,0}
     };
 
+    void sequenceCW(int);
+    void sequenceACW(int);
+
     int ballMidPoint[1];
     int boundaries[2];
     int currentPos = 0;
+    int currentDelay = 0;
 
     int data;
+
+    
 
     protected:
 
@@ -58,7 +63,8 @@ class StepperMotor{
 
     bool TestSerial();
 
-    int accelDecelCW(char, int);
+    int accelDecelCW(int, int);
+    int accelDecelACW(int,int);
 
     void oldReliable();
 

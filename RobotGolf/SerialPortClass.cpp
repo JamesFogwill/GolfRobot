@@ -13,24 +13,39 @@ SerialCommunicator::SerialCommunicator(){
         }
     }
 
+
+}
+
+// if it doesnt work anymore, put this back in constructor.
+void SerialCommunicator::openSerialPort()
+{
     if(STMAvailable == true){
         STM->setPortName(STMPortName);
-        STM->open(QSerialPort::WriteOnly);
         STM->setBaudRate(QSerialPort::Baud9600);
         STM->setDataBits(QSerialPort::Data8);
         STM->setParity(QSerialPort::NoParity);
         STM->setStopBits(QSerialPort::OneStop);
         STM->setFlowControl(QSerialPort::NoFlowControl);
-        cout<<"STM communication is open."<<endl;
+        //---
+        //STM->setRequestToSend(true);
+        //STM->setDataTerminalReady(true);
+        //-----------
+        STM->open(QSerialPort::WriteOnly);
+
+        if(STM->isOpen())
+        {
+            cout<<"STM communication is open."<<endl;
+
+        }
+        else
+        {
+            cout<<"failed to open port"<<endl;
+        }
+
     }
     else{
         cout<<"Cannot open STM serial communication."<<endl;
     }
-}
-
-void SerialCommunicator::openSerialPort()
-{
-
 
  }
 
