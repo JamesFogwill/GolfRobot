@@ -34,8 +34,9 @@ Mat Detector::greenDetect(Mat Frame){
     resize(greenShow,maskEdge,Size(1,greenShow.size().height));
     resize(maskEdge,maskEdge,greenShow.size());
 
-    imshow("GREEn",greenShow);
+    imshow("greenDetect",greenShow);
     imshow("HSV",HSVColourSpace);
+    imshow("theGreen", maskEdge);
     return maskEdge;
 
 }
@@ -46,8 +47,8 @@ array<int,2> Detector::boundaryDetect(Mat maskedEdge){
     array<int, 2>boundaries;
     for(int i = 0; i <= height; i ++){
         // loops through the height anc checks when the pixel values changes to 1
-        int pixelVal = maskedEdge.at<int>(i,200);
-        if(pixelVal == 1){
+        int pixelVal = maskedEdge.at<int>(i,300);
+        if(pixelVal == -1){
             boundaries[0] = i;
             for(int position = i; position <=height;position++){
 
@@ -56,14 +57,21 @@ array<int,2> Detector::boundaryDetect(Mat maskedEdge){
                 if(pixelVal == 0){
                     boundaries[1] = position;
 
-                    return boundaries;
+                    if(boundaries[0] >= 2 && boundaries[0] <= 478 && boundaries[1] >= 2 && boundaries[1] <=478){
+                        return boundaries;
+                        cout<<"collect boundaries success"<<endl;
+                    }
+                    else
+                        break;
                 }
             }
-
+            break;
         }
     }
 
+
     cout<<"collect boundaries failed"<<endl;
+    return boundaries ={0};
 
 
 }

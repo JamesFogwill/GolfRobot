@@ -21,36 +21,56 @@ int main(int argc, char *argv[])
     imshow("mask to start",Mat(100,100,CV_8UC3,Scalar(0,0,0)));
     STMBoard.writeData(to_string(choice));
 
+    int counter = 0;
+    Mat Frame;
+    // set the defult camera as a video capture object called inputStream.
+    VideoCapture inputStream(0);
+
+    //set the boundaries
+    if(choice == 2){
+
+        int boundariesSet = 0;
+        while (true){
+
+            // reads the current input stream and saves the frame to 'Frame'
+            inputStream.read(Frame);
+
+            if(counter >= 15){
+                if(boundariesSet == 0){
+                    Mat greenDetected = myDetector.greenDetect(Frame);
+                    //imshow("TheGreen", greenDetected);
+
+                    array<int, 2> Boundaries = myDetector.boundaryDetect(greenDetected);
+
+                    if(Boundaries[0] != 0 && Boundaries[1] != 0){
+                        for(int i = 0; i<2;i++){
+
+                            STMBoard.writeData(to_string(Boundaries[i]));
+                            cout<<"Boundary "<<i<<" is: "<<Boundaries[i]<<endl;
+                            boundariesSet = 1;
+
+                        }
+                    }
+
+                }
+
+            }
+            counter++;
+
+            // displays the current frame
+            imshow("CameraFeed", Frame);
+            waitKey(10);
+        }
+
+    }
     if(choice == 3){
 
-        Mat Frame;
-        VideoCapture inputStream(0); // set the defult camera as a video capture object called inputStream.
-
         int circleRadius = 20;
-        int boundariesSet = 0;
 
         while(true){
 
             // reads the current input stream and saves the frame to 'Frame'
             inputStream.read(Frame);
-
-            if(boundariesSet == 0){
-                Mat greenDetected = myDetector.greenDetect(Frame);
-                imshow("TheGreen", greenDetected);
-
-                array<int, 2> Boundaries = myDetector.boundaryDetect(greenDetected);
-
-                for(int i = 0; i<2;i++){
-
-                    STMBoard.writeData(to_string(Boundaries[i]));
-                    cout<<"Boundary "<<i<<" is: "<<Boundaries[i]<<endl;
-                    boundariesSet = 1;
-
-                }
-            }
-
-            Mat greenDetected = myDetector.greenDetect(Frame);
-            imshow("TheGreen", greenDetected);
 
             Mat ballDetected = myDetector.detectBall(Frame);
             imshow("Ball Detect", ballDetected);

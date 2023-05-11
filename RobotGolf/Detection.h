@@ -11,7 +11,7 @@ private:
     Vec3b whiteUpperHsv = Vec3b(50,50,255);
 
     //HSV GREEN BOUNDS
-    Vec3b greenLowerHsv = Vec3b(40,0,20);
+    Vec3b greenLowerHsv = Vec3b(35,0,20);
     Vec3b greenUpperHsv = Vec3b(90,255,255);
 
     Mat kernel = getStructuringElement(MORPH_ELLIPSE, Size(5, 5));

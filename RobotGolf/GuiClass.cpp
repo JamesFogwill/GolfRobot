@@ -4,11 +4,15 @@
 
 Gui::Gui(){
 
+}
+
+void Gui::displayStart(){
+
     cout<<"Welcome to PuttPuttPal, Press the number of your option."<<endl;
     cout<<"1: Test"<<endl;
-    cout<<"2: Old Reliable"<<endl;
+    cout<<"2: Set Boundaries"<<endl;
     cout<<"3: NeverMiss"<<endl;
-    cout<<"4: Exit"<<endl;
+    cout<<"4: Old Reliable"<<endl;
 
 }
 
