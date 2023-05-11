@@ -2,7 +2,7 @@
     {
         "module": "Motor.o",
         "size": {
-            ".text": 478,
+            ".text": 1476,
             ".data": 0,
             ".bss": 1,
             ".text-delta": 0,
@@ -13,7 +13,7 @@
     {
         "module": "SerialClass.o",
         "size": {
-            ".text": 84,
+            ".text": 276,
             ".data": 0,
             ".bss": 1,
             ".text-delta": 0,
@@ -24,7 +24,7 @@
     {
         "module": "[lib]\\c_w.l",
         "size": {
-            ".text": 16870,
+            ".text": 17166,
             ".data": 16,
             ".bss": 348,
             ".text-delta": 0,
@@ -35,7 +35,7 @@
     {
         "module": "[lib]\\fz_wm.l",
         "size": {
-            ".text": 1304,
+            ".text": 1540,
             ".data": 0,
             ".bss": 0,
             ".text-delta": 0,
@@ -46,7 +46,7 @@
     {
         "module": "[lib]\\libcpp_w.l",
         "size": {
-            ".text": 66727,
+            ".text": 67039,
             ".data": 0,
             ".bss": 2961,
             ".text-delta": 0,
@@ -68,7 +68,7 @@
     {
         "module": "[lib]\\m_wm.l",
         "size": {
-            ".text": 746,
+            ".text": 900,
             ".data": 0,
             ".bss": 0,
             ".text-delta": 0,
@@ -90,9 +90,9 @@
     {
         "module": "main.o",
         "size": {
-            ".text": 484,
+            ".text": 638,
             ".data": 0,
-            ".bss": 865,
+            ".bss": 853,
             ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
@@ -199,9 +199,9 @@
     },
     {
         "summary": {
-            "static_ram": 29392,
+            "static_ram": 29380,
             "static_ram_delta": 0,
-            "total_flash": 134903,
+            "total_flash": 137245,
             "total_flash_delta": 0
         }
     }

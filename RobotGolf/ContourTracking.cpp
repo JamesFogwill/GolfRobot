@@ -12,7 +12,7 @@ void getContours(Mat imgDil, Mat Frame){
 
 
 
-    /*
+
     //------Method by removing other contours of low area----------
     for (int i = 0; i < contours.size(); i++){
         int area = contourArea(contours[i]);

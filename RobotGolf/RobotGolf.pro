@@ -21,12 +21,14 @@ LIBS +=    -lopencv_core411 \
 SOURCES += \
         BufferClass.cpp \
         ContourTracking.cpp \
+        Detection.cpp \
         GuiClass.cpp \
         SerialPortClass.cpp \
         main.cpp
 
 HEADERS += \
     BufferClass.h \
+    Detection.h \
     GuiClass.h \
     SerialPortClass.h \
     setup.h

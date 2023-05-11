@@ -13,7 +13,7 @@ public:
 
     int getUserInput();
 
-    int displayStart();
+    void displayStart();
 
     void optionSelect(int);
 
