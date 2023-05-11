@@ -5,7 +5,7 @@
             ".text": 1476,
             ".data": 0,
             ".bss": 1,
-            ".text-delta": 972,
+            ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
         }
@@ -13,10 +13,10 @@
     {
         "module": "SerialClass.o",
         "size": {
-            ".text": 292,
+            ".text": 276,
             ".data": 0,
             ".bss": 1,
-            ".text-delta": 208,
+            ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
         }
@@ -27,7 +27,7 @@
             ".text": 17166,
             ".data": 16,
             ".bss": 348,
-            ".text-delta": 296,
+            ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
         }
@@ -38,7 +38,7 @@
             ".text": 1540,
             ".data": 0,
             ".bss": 0,
-            ".text-delta": 236,
+            ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
         }
@@ -49,7 +49,7 @@
             ".text": 67039,
             ".data": 0,
             ".bss": 2961,
-            ".text-delta": 312,
+            ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
         }
@@ -71,7 +71,7 @@
             ".text": 900,
             ".data": 0,
             ".bss": 0,
-            ".text-delta": 154,
+            ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
         }
@@ -92,8 +92,8 @@
         "size": {
             ".text": 638,
             ".data": 0,
-            ".bss": 865,
-            ".text-delta": 108,
+            ".bss": 853,
+            ".text-delta": 0,
             ".data-delta": 0,
             ".bss-delta": 0
         }
@@ -199,10 +199,10 @@
     },
     {
         "summary": {
-            "static_ram": 29392,
+            "static_ram": 29380,
             "static_ram_delta": 0,
-            "total_flash": 137261,
-            "total_flash_delta": 2286
+            "total_flash": 137245,
+            "total_flash_delta": 0
         }
     }
 ]

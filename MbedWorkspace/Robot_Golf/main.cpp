@@ -5,7 +5,7 @@ SerialClass mySerial;
 
 int main()
 {   
-    int option = 3;
+    int option;
     bool serialWork = true; 
     //creates steppermotor object and initialises it with these pins
     StepperMotor myMotor(PF_13, PE_9, PE_11, PF_14);
@@ -37,7 +37,7 @@ int main()
 
             case 3:
 
-                //myMotor.TestRevCW();
+                
                 myMotor.neverMiss();
                 myMotor.stepperOff();
 

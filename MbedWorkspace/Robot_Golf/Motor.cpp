@@ -137,8 +137,8 @@ void StepperMotor::neverMiss(){
     
     //--------------------------------------------------
     // waits for the boundary coordinates from QT then prints them
-    //boundaries[0] = mySerial.serialRead();
-    //boundaries[1] = mySerial.serialRead();
+    boundaries[0] = mySerial.serialRead();
+    boundaries[1] = mySerial.serialRead();
     
     cout<<"The boundary positions are:"<<endl;
     cout<<"Top: "<<boundaries[0]<<endl;
@@ -147,8 +147,8 @@ void StepperMotor::neverMiss(){
 
     
     //-----------TEST CODE-------------
-    boundaries[0] = 310;
-    boundaries[1] = 90;
+    //boundaries[0] = 310;
+    //boundaries[1] = 90;
     //ballMidPoint[0] = 100;
     
     i = 1;

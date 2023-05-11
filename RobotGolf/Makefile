@@ -223,6 +223,7 @@ Makefile: RobotGolf.pro ../../../Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.co
 		../../../Qt/5.15.2/mingw81_64/mkspecs/features/qt_config.prf \
 		../../../Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf \
 		../../../Qt/5.15.2/mingw81_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../Qt/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/5.15.2/mingw81_64/mkspecs/features/toolchain.prf \
 		../../../Qt/5.15.2/mingw81_64/mkspecs/features/default_pre.prf \
@@ -249,7 +250,6 @@ Makefile: RobotGolf.pro ../../../Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.co
 		../../../Qt/5.15.2/mingw81_64/lib/Qt5Gui.prl \
 		../../../Qt/5.15.2/mingw81_64/lib/Qt5SerialPort.prl \
 		../../../Qt/5.15.2/mingw81_64/lib/Qt5Core.prl \
-		.qmake.stash \
 		../../../Qt/5.15.2/mingw81_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile RobotGolf.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 ../../../Qt/5.15.2/mingw81_64/mkspecs/features/spec_pre.prf:
@@ -405,6 +405,7 @@ Makefile: RobotGolf.pro ../../../Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.co
 ../../../Qt/5.15.2/mingw81_64/mkspecs/features/qt_config.prf:
 ../../../Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf:
 ../../../Qt/5.15.2/mingw81_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../Qt/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf:
 ../../../Qt/5.15.2/mingw81_64/mkspecs/features/toolchain.prf:
 ../../../Qt/5.15.2/mingw81_64/mkspecs/features/default_pre.prf:
@@ -431,7 +432,6 @@ RobotGolf.pro:
 ../../../Qt/5.15.2/mingw81_64/lib/Qt5Gui.prl:
 ../../../Qt/5.15.2/mingw81_64/lib/Qt5SerialPort.prl:
 ../../../Qt/5.15.2/mingw81_64/lib/Qt5Core.prl:
-.qmake.stash:
 ../../../Qt/5.15.2/mingw81_64/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile RobotGolf.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
