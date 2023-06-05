@@ -8,7 +8,7 @@ private:
 
     // HSV BOUNDS white
     Vec3b whiteLowerHsv = Vec3b(0,0,230);
-    Vec3b whiteUpperHsv = Vec3b(50,50,255);
+    Vec3b whiteUpperHsv = Vec3b(55,60,255);
 
     //HSV GREEN BOUNDS
     Vec3b greenLowerHsv = Vec3b(35,0,20);

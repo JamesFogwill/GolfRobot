@@ -9,13 +9,12 @@ int main()
     bool serialWork = true; 
     //creates steppermotor object and initialises it with these pins
     StepperMotor myMotor(PF_13, PE_9, PE_11, PF_14);
+    //StepperMotor myMotor(PF_13, PE_9, PE_11, PF_14);
 
-    //myMotor.neverMiss();
-    
-    //serialWork = myMotor.TestSerial();
-
+    //myMotor.oldReliable();
+    // takes the user option from qt and runs the corresponding option in mbed
     option = mySerial.serialRead();
-
+    // case to run dependant on the user option.
     switch (option) {
 
             case 1:
@@ -37,7 +36,7 @@ int main()
 
             case 3:
 
-                
+                // mode that takes the input of the golfball coordinates and moves the motor to the corresponding position
                 myMotor.neverMiss();
                 myMotor.stepperOff();
 
